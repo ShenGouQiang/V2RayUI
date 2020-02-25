@@ -1,4 +1,4 @@
-package com.gouqiang.shen.v2rayui;
+package com.gouqiang.shen;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

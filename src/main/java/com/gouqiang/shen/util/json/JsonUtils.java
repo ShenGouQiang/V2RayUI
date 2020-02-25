@@ -26,7 +26,7 @@ public class JsonUtils {
      */
     public static void createJsonFile(Object jsonData, String filePath) throws IOException {
         String content = JSON.toJSONString(jsonData, SerializerFeature.PrettyFormat, SerializerFeature.WriteMapNullValue,
-                SerializerFeature.WriteDateUseDateFormat);
+                SerializerFeature.WriteDateUseDateFormat,SerializerFeature.DisableCircularReferenceDetect);
         Writer write = null;
         try {
             File file = new File(filePath);

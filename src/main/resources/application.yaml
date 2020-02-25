@@ -1,1 +1,12 @@
+spring:
+  application:
+    name: v2ray-ui
 
+server:
+  port: 8089
+
+
+json:
+  file:
+    originPath: /Users/shengouqiang/Downloads/test.json
+    resultPath: /Users/shengouqiang/Downloads/result.json

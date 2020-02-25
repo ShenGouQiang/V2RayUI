@@ -1,4 +1,4 @@
-package com.gouqiang.shen.service;
+package com.gouqiang.shen.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -9,6 +9,7 @@ import com.gouqiang.shen.domain.vmess.V2RayJsonDO;
 import com.gouqiang.shen.domain.vmess.inbounds.InboundsBean;
 import com.gouqiang.shen.domain.vo.ShowBean;
 import com.gouqiang.shen.exception.BusinessException;
+import com.gouqiang.shen.service.JsonService;
 import com.gouqiang.shen.util.json.JsonUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;

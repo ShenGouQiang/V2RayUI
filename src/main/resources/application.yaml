@@ -8,5 +8,13 @@ server:
 
 json:
   file:
-    originPath: /Users/shengouqiang/Downloads/test.json
-    resultPath: /Users/shengouqiang/Downloads/result.json
+    originPath: F:\GitHub\V2RayUI\src\main\resources\in\config.json
+    resultPath: F:\GitHub\V2RayUI\src\main\resources\out\json\config.json
+
+nginx:
+  filePath: F:\GitHub\V2RayUI\src\main\resources\out\loc
+  templateFile: F:\GitHub\V2RayUI\src\main\resources\template\nginxTemplate.loc
+
+
+shell:
+  filePath: F:\GitHub\V2RayUI\src\main\resources\shell\test.bat

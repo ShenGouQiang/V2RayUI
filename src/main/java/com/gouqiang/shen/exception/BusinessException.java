@@ -12,6 +12,10 @@ public class BusinessException extends RuntimeException {
 
     private ReturnConstantsEnum errorEnums;
 
+    public BusinessException(ReturnConstantsEnum res,Throwable e){
+        super(res.getDesc(),e);
+    }
+
     public BusinessException(String msg){
         super(msg);
     }

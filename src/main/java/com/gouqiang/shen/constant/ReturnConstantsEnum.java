@@ -17,10 +17,30 @@ public enum ReturnConstantsEnum {
      * 写入JSON文件失败
      */
     WRITE_JSON_FILE_FAIL("10002", "写入JSON文件失败"),
+
+    /**
+     * 模板文件不存在
+     */
+    TEMPLATE_FEIL_NOT_EXIT("10004", "模板文件不存在"),
+    /**
+     * 写入LOC文件失败
+     */
+    WRITE_LOC_FILE_FAIL("10005", "写入LOC文件失败"),
+
+    /**
+     * 执行脚本失败
+     */
+    EXECUTE_COMMAND_SHELL_FAIL("10006", "执行脚本失败"),
+
     /**
      * 成功
      */
-    SUCCESS("0000", "success");
+    SUCCESS("0000", "success"),
+
+    /**
+     * 当前路径非法
+     */
+    NOT_ALLOW_PATH_NAME("10003", "当前路径非法");
 
     /**
      * 编码

@@ -23,7 +23,7 @@ public class WebController {
     @Resource
     JsonService jsonService;
 
-    @PostMapping("/add/v2ray/json/info")
+    @GetMapping("/add/v2ray/json/info")
     public Result<Void> saveModifyToJson(@RequestParam("port") Integer port,
                                          @RequestParam("id") String id,
                                          @RequestParam("alertId") Integer alterId,

@@ -8,13 +8,15 @@ server:
 
 json:
   file:
-    originPath: F:\GitHub\V2RayUI\src\main\resources\in\config.json
-    resultPath: F:\GitHub\V2RayUI\src\main\resources\out\json\config.json
+    originPath: /etc/v2ray/config.json
+    resultPath: /etc/v2ray/config.pwd
+    json
 
 nginx:
-  filePath: F:\GitHub\V2RayUI\src\main\resources\out\loc
-  templateFile: F:\GitHub\V2RayUI\src\main\resources\template\nginxTemplate.loc
+  filePath: /etc/nginx/conf.d
+  templateFile: /root/v2ray/sources/LocTemplateDirectory/nginxTemplate.loc
 
 
 shell:
-  filePath: F:\GitHub\V2RayUI\src\main\resources\shell\test.bat
+  filePath: /root/v2ray/sources/ShellDirectory/v2rayNginx.sh
+  jsonPath: /root/v2ray/sources/ShellDirectory/backupJson.sh

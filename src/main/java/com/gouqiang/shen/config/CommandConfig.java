@@ -14,4 +14,7 @@ public class CommandConfig {
 
     @Value("${shell.filePath}")
     private String commandFilePath;
+
+    @Value(("${shell.jsonPath}"))
+    private String jsonCommandFilePath;
 }

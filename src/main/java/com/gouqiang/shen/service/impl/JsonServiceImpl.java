@@ -47,6 +47,7 @@ public class JsonServiceImpl implements JsonService {
     @Override
     public void save(Integer port, String id, Integer alterId, String path) {
         try {
+            ExecuteShellCommandUtils.exec(commandConfig.getJsonCommandFilePath());
             checkPathLegal(path);
             createNewJsonFile(port,id,alterId,path);
             createNewLocFile(path,port);
@@ -80,6 +81,7 @@ public class JsonServiceImpl implements JsonService {
     public void deleteJson(String id,String path) {
         try {
             checkPathLegal(path);
+            ExecuteShellCommandUtils.exec(commandConfig.getJsonCommandFilePath());
             String jsonStr = JsonUtils.readFile(josnConfig.getOriginFilePath());
             V2RayJsonDO jsonDO = JSONObject.parseObject(jsonStr, V2RayJsonDO.class);
             List<InboundsBean> inboundsBeanList = jsonDO.getInbounds();

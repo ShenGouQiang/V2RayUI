@@ -7,8 +7,8 @@
 			"settings":{
 				"clients":[
 					{
-						"alterId":56,
-						"id":"c072aaea-8d67-49f4-b5c8-23397e62bf1d",
+						"alterId":64,
+						"id":"b805a0e6-fe9f-46e6-80e9-82c59a798022",
 						"level":1
 					}
 				]
@@ -16,7 +16,7 @@
 			"streamSettings":{
 				"network":"ws",
 				"wsSettings":{
-					"path":"xqhcojomevmegcqp"
+					"path":"/opccqzzpmdsobcab"
 				}
 			}
 		},
@@ -39,33 +39,13 @@
 					"path":"/uqfyxrixszvhdjpg"
 				}
 			}
-		},
-		{
-			"listen":"127.0.0.1",
-			"port":18543,
-			"protocol":"vmess",
-			"settings":{
-				"clients":[
-					{
-						"alterId":56,
-						"id":"c072aaea-8d67-49f4-b5c8-23397e62bf1d",
-						"level":1
-					}
-				]
-			},
-			"streamSettings":{
-				"network":"ws",
-				"wsSettings":{
-					"path":"xqhcojomevmegcqp"
-				}
-			}
 		}
 	],
 	"outbounds":[
 		{
 			"protocol":"freedom",
 			"settings":{},
-			"tag":"hahahahaha"
+			"tag":null
 		},
 		{
 			"protocol":"blackhole",

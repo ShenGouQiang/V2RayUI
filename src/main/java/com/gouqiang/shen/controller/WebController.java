@@ -4,10 +4,7 @@ import com.gouqiang.shen.common.Result;
 import com.gouqiang.shen.domain.vo.ShowBean;
 import com.gouqiang.shen.service.JsonService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -18,6 +15,7 @@ import java.util.List;
  */
 @RestController
 @Slf4j
+@RequestMapping("/v2rayBack")
 public class WebController {
 
     @Resource

@@ -9,7 +9,7 @@ import com.gouqiang.shen.config.LocFileFormatConfig;
 import com.gouqiang.shen.constant.Constants;
 import com.gouqiang.shen.constant.ReturnConstantsEnum;
 import com.gouqiang.shen.domain.vmess.V2RayJsonDO;
-import com.gouqiang.shen.domain.vmess.inbounds.InboundsBean;
+import com.gouqiang.shen.domain.vmess.inbounds.*;
 import com.gouqiang.shen.domain.vo.ShowBean;
 import com.gouqiang.shen.exception.BusinessException;
 import com.gouqiang.shen.service.JsonService;
@@ -22,6 +22,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
@@ -135,11 +136,25 @@ public class JsonServiceImpl implements JsonService {
             throw new BusinessException(ReturnConstantsEnum.WRITE_JSON_FILE_FAIL);
         }
         InboundsBean newBean  = new InboundsBean();
-        BeanUtils.copyProperties(inboundsBeanList.get(0),newBean);
+
         newBean.setPort(port);
-        newBean.getSettings().getClients().get(0).setId(id);
-        newBean.getSettings().getClients().get(0).setAlterId(alterId);
-        newBean.getStreamSettings().getWsSettings().setPath("/"+path);
+        newBean.setListen("127.0.0.1");
+        newBean.setProtocol("vmess");
+        SettingsBean settingsBean = new SettingsBean();
+        ClientsBean clientsBean = new ClientsBean();
+        clientsBean.setLevel(1);
+        clientsBean.setId(id);
+        clientsBean.setAlterId(alterId);
+        settingsBean.setClients(Arrays.asList(clientsBean));
+        newBean.setSettings(settingsBean);
+
+        StreamSettingsBean streamSettingsBean = new StreamSettingsBean();
+        WsSettingsBean wsSettingsBean = new WsSettingsBean();
+        wsSettingsBean.setPath("/"+path);
+        streamSettingsBean.setNetwork("ws");
+        streamSettingsBean.setWsSettings(wsSettingsBean);
+        newBean.setStreamSettings(streamSettingsBean);
+
         inboundsBeanList.add(newBean);
         JsonUtils.createJsonFile(jsonDO, josnConfig.getResultFilePath());
     }

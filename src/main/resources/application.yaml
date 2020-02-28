@@ -9,8 +9,7 @@ server:
 json:
   file:
     originPath: /etc/v2ray/config.json
-    resultPath: /etc/v2ray/config.pwd
-    json
+    resultPath: /etc/v2ray/config.json
 
 nginx:
   filePath: /etc/nginx/conf.d

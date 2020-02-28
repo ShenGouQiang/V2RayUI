@@ -129,7 +129,7 @@ public class JsonServiceImpl implements JsonService {
         String jsonStr = JsonUtils.readFile(josnConfig.getOriginFilePath());
         V2RayJsonDO jsonDO = JSONObject.parseObject(jsonStr, V2RayJsonDO.class);
         List<InboundsBean> inboundsBeanList = jsonDO.getInbounds();
-        InboundsBean selectBean = inboundsBeanList.stream().filter(i -> i.getStreamSettings().getWsSettings().getPath().equals(path))
+        InboundsBean selectBean = inboundsBeanList.stream().filter(i -> i.getStreamSettings().getWsSettings().getPath().equals("/"+path))
                 .filter(i -> i.getSettings().getClients().stream().anyMatch(c -> c.getId().equals(id))).findFirst().orElse(null);
         if (!Objects.isNull(selectBean)) {
             throw new BusinessException(ReturnConstantsEnum.WRITE_JSON_FILE_FAIL);
@@ -139,7 +139,7 @@ public class JsonServiceImpl implements JsonService {
         newBean.setPort(port);
         newBean.getSettings().getClients().get(0).setId(id);
         newBean.getSettings().getClients().get(0).setAlterId(alterId);
-        newBean.getStreamSettings().getWsSettings().setPath(path);
+        newBean.getStreamSettings().getWsSettings().setPath("/"+path);
         inboundsBeanList.add(newBean);
         JsonUtils.createJsonFile(jsonDO, josnConfig.getResultFilePath());
     }

@@ -39,6 +39,46 @@
 					"path":"/uqfyxrixszvhdjpg"
 				}
 			}
+		},
+		{
+			"listen":"127.0.0.1",
+			"port":18543,
+			"protocol":"vmess",
+			"settings":{
+				"clients":[
+					{
+						"alterId":56,
+						"id":"c072aaea-8d67-49f4-b5c8-23397e62bf1d",
+						"level":1
+					}
+				]
+			},
+			"streamSettings":{
+				"network":"ws",
+				"wsSettings":{
+					"path":"/xqhcojomevmegcqp"
+				}
+			}
+		},
+		{
+			"listen":"127.0.0.1",
+			"port":18543,
+			"protocol":"vmess",
+			"settings":{
+				"clients":[
+					{
+						"alterId":56,
+						"id":"c072aaea-8d67-49f4-b5c8-23397e62bf1d",
+						"level":1
+					}
+				]
+			},
+			"streamSettings":{
+				"network":"ws",
+				"wsSettings":{
+					"path":"/xqhcojomevmegcqp1"
+				}
+			}
 		}
 	],
 	"outbounds":[

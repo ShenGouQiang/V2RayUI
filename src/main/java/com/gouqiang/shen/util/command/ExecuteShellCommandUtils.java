@@ -24,8 +24,9 @@ public class ExecuteShellCommandUtils {
              BufferedReader br = new BufferedReader(isr);
              String line="";
              while ((line = br.readLine()) != null) {
-                 System.out.println(line);
+                 log.info(line);
              }
+             log.info("脚本执行完毕");
          }catch (Exception e){
              log.error(ReturnConstantsEnum.EXECUTE_COMMAND_SHELL_FAIL.getDesc(), e);
              throw new BusinessException(ReturnConstantsEnum.EXECUTE_COMMAND_SHELL_FAIL, e);
